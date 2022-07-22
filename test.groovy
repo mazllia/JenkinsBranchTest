@@ -12,7 +12,7 @@ def CheckoutSCM() {
     echo $GIT_BRANCH
     git status
     '''
-    git branch: ${GIT_BRANCH}, url: 'git@github.com:mazllia/JenkinsBranchTest.git'
+    git branch: "${GIT_BRANCH}", url: 'git@github.com:mazllia/JenkinsBranchTest.git'
     sh '''
     git status
     '''
