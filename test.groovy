@@ -9,7 +9,8 @@ pipeline {
 
 def CheckoutSCM() {
     sh '''
-    echo ${BRANCH_NAME}
+    env
+    echo $BRANCH_NAME
     git status
     '''
 }
