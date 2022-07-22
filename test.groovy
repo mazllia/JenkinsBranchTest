@@ -9,8 +9,11 @@ pipeline {
 
 def CheckoutSCM() {
     sh '''
-    env
-    echo $BRANCH_NAME
+    echo $GIT_BRANCH
+    git status
+    '''
+    git branch: $GIT_BRANCH, url: 'git@github.com:mazllia/JenkinsBranchTest.git'
+    sh '''
     git status
     '''
 }
